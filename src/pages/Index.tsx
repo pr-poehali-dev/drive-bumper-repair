@@ -29,7 +29,7 @@ const Index = () => {
         <Reviews />
         <ContactsSection 
           address={companyData.address}
-          phoneNumbers={companyData.phoneNumbers}
+          phoneNumbers={['+7 (996) 621-53-96', '740877', '+7 927 770 3126']}
           email={companyData.email}
           telegram={companyData.telegram}
         />
@@ -37,7 +37,7 @@ const Index = () => {
       
       <Footer 
         address={companyData.address}
-        phoneNumbers={companyData.phoneNumbers}
+        phoneNumbers={['+7 (996) 621-53-96', '740877', '+7 927 770 3126']}
         email={companyData.email}
         telegram={companyData.telegram}
       />

@@ -33,9 +33,9 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       <div className="p-6 flex flex-col flex-grow">
         <h3 className="text-xl font-bold mb-3">{title}</h3>
         <p className="text-drive-gray mb-4 flex-grow">{description}</p>
-        <div className="flex items-center mb-4">
-          <span className="price-tag">{price}</span>
-          <span className="price-note ml-2">*зависит от сложности выполнения работ</span>
+        <div className="mb-4">
+          <span className="price-tag block mb-1">{price}</span>
+          <span className="price-note block">*зависит от сложности выполнения работ</span>
         </div>
         <Button 
           onClick={handleCallButtonClick} 

@@ -12,6 +12,9 @@ const Header: React.FC<HeaderProps> = ({ phoneNumber, address }) => {
   const handlePhoneClick = () => {
     window.location.href = `tel:${phoneNumber}`;
   };
+  
+  // Форматирование номера телефона
+  const formattedPhone = '+7 (996) 621-53-96';
 
   return (
     <header className="relative w-full h-[60vh] min-h-[400px] md:h-[80vh] flex items-center justify-center overflow-hidden text-white">
@@ -27,15 +30,17 @@ const Header: React.FC<HeaderProps> = ({ phoneNumber, address }) => {
       />
       
       <div className="container mx-auto px-4 z-10 relative">
-        {/* Верхняя панель */}
-        <div className="absolute top-0 left-0 w-full flex justify-between items-center py-6 px-4 md:px-8">
-          <h1 className="text-5xl md:text-6xl font-bold text-drive-red">ДРАЙВ</h1>
-          <a 
-            href={`tel:${phoneNumber}`}
-            className="text-white text-xl md:text-2xl font-medium hover:text-drive-red transition-colors"
-          >
-            {phoneNumber}
-          </a>
+        {/* Верхняя панель с логотипом и телефоном */}
+        <div className="absolute top-0 left-0 w-full flex items-center py-6 px-4 md:px-8">
+          <div className="flex items-center">
+            <h1 className="text-4xl font-bold text-drive-red mr-4">ДРАЙВ</h1>
+            <a 
+              href={`tel:${phoneNumber}`}
+              className="text-white text-base md:text-lg font-medium hover:text-drive-red transition-colors"
+            >
+              {formattedPhone}
+            </a>
+          </div>
         </div>
         
         {/* Основной контент */}
